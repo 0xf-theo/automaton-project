@@ -1,0 +1,78 @@
+[---------------------------------------------------------------------------]
+Automate a charger : ./resources/tests/D4_03.txt
+[---------------------------------------------------------------------------]
+Alphabet : [a]
+Nombre de transitions : 1
+Nombre d'état : 2
+Etat initiaux : [0]
+Etat finaux : [1]
+----------+------------+------------+
+|  Type   |  Sommets   |     a      |
+----------+------------+------------+
+|    E    |     0      |     1      |
+|    S    |     1      |     --     |
+----------+------------+------------+
+
+[---------------------------------------------------------------------------]
+           [Standard : Oui] [Déterministe : Non] [Complet : Non]           
+[---------------------------------------------------------------------------]
+
+L'automate n'est pas déterministe : aucune destination possible pour l'état 1 et le symbole a
+[---------------------------------------------------------------------------]
+                     ~ Automate déterministe complet ~                     
+[---------------------------------------------------------------------------]
+Alphabet : [a]
+Nombre de transitions : 3
+Nombre d'état : 3
+Etat initiaux : [0]
+Etat finaux : [1]
+----------+----------+----------+
+|  Type   | Sommets  |    a     |
+----------+----------+----------+
+|    E    |    0     |    1     |
+|    S    |    1     |    P     |
+|         |    P     |    P     |
+----------+----------+----------+
+
+[---------------------------------------------------------------------------]
+            ~ Automate déterministe complet et complémentaire ~            
+[---------------------------------------------------------------------------]
+Alphabet : [a]
+Nombre de transitions : 3
+Nombre d'état : 3
+Etat initiaux : [0]
+Etat finaux : [0, P]
+----------+----------+----------+
+|  Type   | Sommets  |    a     |
+----------+----------+----------+
+|   ES    |    0     |    1     |
+|         |    1     |    P     |
+|    S    |    P     |    P     |
+----------+----------+----------+
+
+[---------------------------------------------------------------------------]
+                ~ Automate déterministe complet minimisé ~                 
+[---------------------------------------------------------------------------]
+Partition à l'itération 0 : [[0, 1], [P]]
+Partition à l'itération 1 : [[0], [1], [P]]
+Alphabet : [a]
+Nombre de transitions : 3
+Nombre d'état : 3
+Etat initiaux : [0]
+Etat finaux : [P]
+----------+----------+----------+
+|  Type   | Sommets  |    a     |
+----------+----------+----------+
+|    E    |    0     |    P     |
+|         |    1     |    1     |
+|    S    |    P     |    1     |
+----------+----------+----------+
+
+-------------------------------------------
+Lecture de mot, mettez 'fin' pour terminer
+a
+Le mot 'a' est reconnu par l'automate
+aa
+Le mot 'aa' n'est pas reconnu par l'automate
+ 
+Le mot ' ' n'est pas reconnu par l'automate
